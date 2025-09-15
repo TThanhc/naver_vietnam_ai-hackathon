@@ -1,0 +1,81 @@
+.app-shell{display:grid; grid-template-columns: 260px 1fr; height:100vh; gap:0}
+.sidebar{
+  background: linear-gradient(180deg, #0f2121, #0b1717);
+  border-right: 1px solid #173232;
+  padding: 20px 16px;
+  display:flex; flex-direction:column; gap:16px;
+}
+.brand{font-weight:800; letter-spacing:.2px; font-size:1.2rem}
+.nav{display:flex; flex-direction:column; gap:6px; margin-top:8px}
+.nav-link{
+  padding:10px 12px; border-radius:10px; color:var(--muted);
+  display:flex; align-items:center; gap:8px; transition:.15s;
+}
+.nav-link:hover{background:#132828; color:var(--text)}
+.nav-link.active{background:#122222; color:#fff; outline:1px solid #1f3f3f}
+.nav-sep{height:1px; background:#173232; margin:8px 0}
+
+.foot{margin-top:auto; color:var(--muted)}
+.main{padding:24px; overflow:auto}
+
+.page h1{font-size:1.6rem; margin:0 0 8px}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.card{
+  background: rgba(20,40,40,.65);
+  border:1px solid #163232; border-radius:16px; box-shadow: var(--shadow);
+  padding:14px 16px;
+}
+.grid{display:grid; gap:14px}
+.grid.cols-2{grid-template-columns: 1fr 1fr}
+.grid.cols-3{grid-template-columns: repeat(3, 1fr)}
+
+.row{display:flex; align-items:center; gap:10px}
+.row.right{justify-content:flex-end}
+.row.space-between{justify-content:space-between}
+.spacer{flex:1}
+.gap8{gap:8px}
+
+.input, select, textarea{
+  width:100%; background:#0f1e1e; border:1px solid #1a3a3a; border-radius:12px;
+  color:var(--text); padding:10px 12px; outline:none;
+}
+.input:focus, select:focus, textarea:focus{box-shadow:0 0 0 4px var(--ring)}
+
+.btn{
+  padding:10px 12px; border-radius:12px; background:#143232; color:#eafffb;
+  border:1px solid #1e4a4a; cursor:pointer;
+}
+.btn:hover{filter:brightness(1.08)}
+.btn.primary{background:linear-gradient(180deg, #1a7b5b, #165f48); border-color:#1ea171}
+.btn.ghost{background:transparent; border-color:#214545; color:var(--muted)}
+.btn.danger{background:#3a1515; border-color:#612222; color:#ffb3b3}
+
+.tag{padding:4px 8px; border-radius:999px; font-size:.8rem; border:1px solid #224444; color:#bfeeed}
+.pill{padding:2px 8px; border-radius:999px; background:#0f2222; border:1px solid #214545; margin-left:8px; font-size:.8rem}
+
+.table{width:100%; border-collapse:separate; border-spacing:0 8px}
+.table th{font-weight:700; text-align:left; color:#9fc8c8; font-size:.9rem}
+.table td{background:rgba(17,34,34,.6); border:1px solid #1a3a3a; padding:10px; }
+.table tr td:first-child{border-radius:12px 0 0 12px}
+.table tr td:last-child{border-radius:0 12px 12px 0}
+
+.toolbar{display:flex; gap:10px; align-items:center; margin:8px 0}
+.badge{border:1px dashed #1f4848; padding:4px 8px; border-radius:8px; font-size:.75rem}
+.kpi{font-size:1.4rem; font-weight:800}
+hr.div{border:none; border-top:1px solid #173232; margin:12px 0}
+
+/* calendar */
+.calendar{display:grid; grid-template-columns: repeat(7, 1fr); gap:8px}
+.day{background:#0f2222; border:1px solid #1a3a3a; border-radius:12px; min-height:110px; padding:8px}
+.day .d{display:flex; justify-content:space-between; align-items:center; font-size:.9rem; margin-bottom:6px; color:#9fdcdc}
+.day .t{display:flex; flex-direction:column; gap:4px}
+.day .chip{font-size:.75rem; padding:4px 6px; border-radius:8px; background:#132828; border:1px solid #214545}
+.day.today{outline:2px solid #205a5a}
+.day.muted{opacity:.5}
+
+/* responsive */
+@media (max-width: 900px){
+  .app-shell{grid-template-columns: 1fr}
+  .sidebar{position:sticky; top:0; z-index:5; border-right:none; border-bottom:1px solid #173232}
+}

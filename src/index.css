@@ -1,0 +1,24 @@
+:root{
+  --bg: #0d1616;
+  --panel: #0f1f1f;
+  --muted: #9fb3b4;
+  --text: #e7f2f2;
+  --accent: #5ff2a5;
+  --accent-2: #45d1ff;
+  --danger: #ff6b6b;
+  --ring: rgba(95,242,165,.35);
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:
+    radial-gradient(1000px 600px at -10% -10%, #163333 0%, transparent 60%),
+    radial-gradient(800px 500px at 110% 10%, #11283a 0%, transparent 60%),
+    linear-gradient(180deg, #0a1111, #071010);
+}
+a{color:inherit;text-decoration:none}
+small{font-size:.875rem}
